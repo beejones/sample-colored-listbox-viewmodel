@@ -16,6 +16,10 @@ namespace SampleColoredListboxViewmodel.Viewmodel
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
+        /// <summary>
+        /// This is a sample data set. The one marked with IsSpecial will be highlighted in the UI.
+        /// You can have a property method to set the property when needed.
+        /// </summary>
         public List<Music> DataSet = new List<Music>
                 {
                     new Music {Title="And the beat goes on", IsSpecial=false},
@@ -23,6 +27,9 @@ namespace SampleColoredListboxViewmodel.Viewmodel
                     new Music {Title="Careless wispers", IsSpecial=true}
                 };
 
+        /// <summary>
+        /// Show the data set as a ObservableCollection needed for the UI.
+        /// </summary>
         public ObservableCollection<Music> MyMusic
         {
             get 
